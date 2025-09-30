@@ -51,25 +51,51 @@
 
   /*.about{display:grid;gap:28px;grid-template-columns:280px 1fr;align-items:center}*/
   /*  .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}*/
-   @media (min-width: 880px) {
+ .about {
+  display: flex;
+  flex-direction: column; /* mobil: staplat */
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.about img {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  filter: saturate(.85) contrast(.95);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.about .intro {
+  max-width: 700px;
+}
+
+/* På dator: bild + text bredvid varandra */
+@media (min-width: 880px) {
   .about {
-    flex-direction: row;
+    flex-direction: row;       /* nu garanterat sida vid sida */
+    justify-content: center;   /* centrerar helheten */
     align-items: flex-start;
     text-align: left;
   }
 
   .about img {
-    width: 35%;   /* ca en tredjedel av sidan */
-    max-width: 350px;
+    flex: 0 0 35%;   /* 35% av bredden, inte mer */
+    max-width: 320px;
     margin-bottom: 0;
     margin-right: 32px;
   }
 
   .about .intro {
-    width: 65%;   /* resten av bredden */
-    max-width: none;
+    flex: 1;          /* resten av utrymmet */
+    max-width: 600px;
   }
 }
+
 
 
 
@@ -128,12 +154,12 @@
       <h2>Academia & Research</h2>
 <p>
   My academic background is in phonetics and speech production, with a focus on articulatory data and the neurocognitive and physiological foundations of language. 
-  Method development and data processing are central to my work. 
+  
  
 </p> 
       <p> 
-         This research helps us understand how speaker identity (dialect, second language, emotions) and speech-related pathologies 
-        such as motor diseases and dyslexia shape communication. 
+         Method development and data processing are central to my work. This research helps us understand how speaker identity (dialect, second language) and emotions, and speech-related pathologies 
+        such as motor diseases and dyslexia, shape communication. 
   I am particularly interested in applying this knowledge to ASR and TTS.
       </p>
 
