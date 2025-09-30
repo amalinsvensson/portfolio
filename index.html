@@ -51,17 +51,17 @@
 
   /*.about{display:grid;gap:28px;grid-template-columns:280px 1fr;align-items:center}*/
   /*  .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}*/
-    .about {
+   .about {
   display: flex;
-  flex-direction: column; /* default = mobil: staplat */
+  flex-direction: column; /* mobil: staplat */
   align-items: center;
   text-align: center;
   gap: 24px;
 }
 
 .about img {
-  width: 80%;
-  max-width: 400px; /* stor bild även på dator */
+  width: 90%;
+  max-width: 500px;
   height: auto;
   border-radius: 16px;
   object-fit: cover;
@@ -83,13 +83,14 @@
   }
 
   .about img {
-    width: 300px;   /* större än din tidigare 180px */
+    width: 50%;   /* halva sidan */
     max-width: none;
     margin-bottom: 0;
     margin-right: 32px;
   }
 
   .about .intro {
+    width: 50%;   /* andra halvan av sidan */
     max-width: none;
   }
 }
