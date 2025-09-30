@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
   <style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;line-height:1.6;background:#fafafa;color:#222}
     header{background:#333;color:#fff;padding:2rem;text-align:center}
-    nav{display:flex;gap:1rem;justify-content:center;background:#222}
+    nav{display:flex;gap:1rem;justify-content:center;background:#222;flex-wrap:wrap}
     nav a{color:#fff;text-decoration:none;padding:0.8rem 1rem}
     nav a:hover{background:#444}
     section{max-width:900px;margin:auto;background:#fff;padding:2rem;margin-top:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
@@ -18,54 +18,80 @@
 <body>
   <header>
     <h1>Malin Svensson</h1>
-    <p>Forskare • Konsult • Konstnär</p>
+    <p>Researcher • Consultant • Artist</p>
   </header>
 
   <nav>
-    <a href="#om">Om mig</a>
-    <a href="#akademi">Akademi</a>
-    <a href="#konsult">Konsult</a>
-    <a href="#konst">Konst</a>
-    <a href="#kontakt">Kontakt</a>
+    <a href="#about">About</a>
+    <a href="#academia">Academia</a>
+    <a href="#consulting">Consulting</a>
+    <a href="#art">Art</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="om">
-    <h2>Om mig</h2>
-    <img src="Malin.jpg" alt="Porträtt">
-    <p>Kort presentation… (byt ut texten).</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="your-photo.jpg" alt="Portrait">
+    <p>
+      I am a curious and versatile professional who combines academic research, artistic creation, 
+      and consulting work. My background in phonetics and speech technology meets my passion for creative 
+      expression and practical solutions.
+    </p>
   </section>
 
-  <section id="akademi">
-    <h2>Akademi & forskning</h2>
-    <p>Fokusområden…</p>
+  <section id="academia">
+    <h2>Academia & Research</h2>
+    <p>
+      My academic background is in phonetics and speech production, with a focus on articulatory data, 
+      neurocognitive aspects of language, and applications in AI and dyslexia.
+    </p>
+    <h3>Selected Publications</h3>
     <ul>
-      <li>Publikation 1 – <a href="#">länk</a></li>
-      <li>Publikation 2 – <a href="#">länk</a></li>
+      <li>Publication 1 – <a href="#">Link</a></li>
+      <li>Publication 2 – <a href="#">Link</a></li>
+      <li>Publication 3 – <a href="#">Link</a></li>
     </ul>
   </section>
 
-  <section id="konsult">
-    <h2>Konsultverksamhet</h2>
+  <section id="consulting">
+    <h2>Consulting</h2>
+    <p>I offer services such as:</p>
     <ul>
-      <li>Dataanalys & visualisering (R, talanalys)</li>
-      <li>Workshops/föreläsningar</li>
-      <li>Språkteknologi & fonetikstöd</li>
+      <li>Data analysis and visualization (R, speech technology, phonetics)</li>
+      <li>Linguistic assessments and speech-related support</li>
+      <li>Workshops and lectures on language, AI, and creativity</li>
+    </ul>
+    <p>
+      I help companies, research projects, and creative initiatives find new solutions by combining 
+      analytical skills with creative thinking.
+    </p>
+  </section>
+
+  <section id="art">
+    <h2>Art</h2>
+    <p>
+      My artistic work explores color, form, and patterns through drawings, paintings, and mixed media. 
+      Art is both a personal expression and a way to connect with others.
+    </p>
+    <h3>Examples</h3>
+    <ul>
+      <li><a href="#">Gallery 1</a></li>
+      <li><a href="#">Gallery 2</a></li>
+      <li><a href="#">Commissions & Projects</a></li>
     </ul>
   </section>
 
-  <section id="konst">
-    <h2>Konst</h2>
-    <ul>
-      <li><a href="#">Galleri</a></li>
-      <li><a href="#">Beställningar</a></li>
-    </ul>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Interested in collaborating, commissioning art, or learning more?</p>
+    <p>
+      📧 <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a><br>
+      🔗 <a href="https://linkedin.com/in/yourname">LinkedIn</a>
+    </p>
   </section>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>📧 <a href="mailto:dinmail@gmail.com">dinmail@gmail.com</a> · 🔗 <a href="https://linkedin.com/in/dittnamn">LinkedIn</a></p>
-  </section>
-
-  <footer>© 2025 Malin Svensson</footer>
+  <footer>
+    <p>© 2025 Malin Svensson</p>
+  </footer>
 </body>
 </html>
