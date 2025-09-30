@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malin Svensson — Portfolio</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Palette (muted browns & black) ---- */
+    :root{
+      --bg:#0e0d0c;              /* page background (near-black) */
+      --ink:#e8e4df;             /* primary text (warm off-white) */
+      --muted:#a79c91;           /* secondary text */
+      --card:#151311;            /* card background (espresso) */
+      --edge:#27221e;            /* borders */
+      --accent:#c9a66b;          /* brass/ochre accent */
+      --accent-soft:#5a5048;     /* soft brown for pills etc. */
+      --shadow:0 14px 32px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}
+
+    /* Subtle film grain */
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.08;
+      background-image:radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size:3px 3px;
+    }
+
+    /* ---- Hero ---- */
+    .hero{
+      position:relative;text-align:center;padding:110px 20px 84px;z-index:1;
+      background:
+        radial-gradient(900px 520px at 20% -20%, rgba(201,166,107,.10), transparent 60%),
+        radial-gradient(900px 520px at 80% 0%, rgba(90,80,72,.14), transparent 60%),
+        linear-gradient(180deg, #12100f 0%, var(--bg) 100%);
+      border-bottom:1px solid var(--edge);
+    }
+    .hero h1{font-family:"Cormorant Garamond", serif;font-weight:700;letter-spacing:.3px;font-size:clamp(34px,5vw,58px);margin:0 0 8px}
+    .hero p{color:var(--muted);max-width:860px;margin:0 auto;font-size:clamp(16px,2vw,18px)}
+
+    /* ---- Nav ---- */
+    .nav{position:sticky;top:0;z-index:5;backdrop-filter:saturate(130%) blur(8px);
+      background:rgba(14,13,12,.65);border-bottom:1px solid var(--edge)}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:12px 20px}
+    .brand{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:.4px}
+    .spacer{flex:1}
+    .nav a{color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:12px;font-weight:600}
+    .nav a:hover{background:rgba(201,166,107,.10)}
+
+    /* ---- Sections & cards ---- */
+    .section{max-width:1100px;margin:40px auto;padding:0 20px;position:relative;z-index:1}
+    .card{background:var(--card);border:1px solid var(--edge);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;margin-bottom:24px}
+    .card h2{margin:0 0 10px;font-size:26px;font-family:"Cormorant Garamond",serif}
+    .lead{color:var(--muted);margin-top:0}
+
+    /* ---- About (image + text side-by-side) ---- */
+    .about{display:grid;gap:28px;grid-template-columns:160px 1fr;align-items:center}
+    .about img{width:160px;height:200px;border-radius:16px;object-fit:cover;filter:saturate(.85) contrast(.95);box-shadow:var(--shadow)}
+    .pill{display:inline-flex;align-items:center;gap:10px;background:var(--accent-soft);color:var(--ink);
+      border:1px solid var(--edge);padding:8px 12px;border-radius:999px;font-size:13px;margin-bottom:8px}
+
+    /* ---- Lists & gallery ---- */
+    .list{margin:0;padding-left:18px}
+    .list li{margin:.4rem 0}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (min-width:720px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .gallery img{width:100%;height:190px;object-fit:cover;border-radius:12px;filter:saturate(.9) contrast(.95)}
+
+    /* ---- Links & buttons ---- */
+    a{color:var(--accent)}
+    a:hover{opacity:.9}
+    .btn{
+      display:inline-block;text-decoration:none;color:var(--ink);font-weight:700;
+      background:linear-gradient(180deg, rgba(201,166,107,.22), rgba(201,166,107,.12));
+      border:1px solid var(--edge);padding:10px 14px;border-radius:12px
+    }
+    .btn:hover{background:linear-gradient(180deg, rgba(201,166,107,.28), rgba(201,166,107,.16))}
+
+    /* ---- Small fade-in animation ---- */
+    .fade{opacity:0;transform:translateY(6px);animation:fadeIn .8s ease .1s forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+
+    footer{color:var(--muted);text-align:center;padding:28px}
+  </style>
+</head>
+<body>
+  <header class="hero fade">
+    <h1>Malin Svensson</h1>
+    <p>Researcher • Consultant • Artist</p>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">MS</div>
+      <div class="spacer"></div>
+      <a href="#about">About</a>
+      <a href="#academia">Academia</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#art">Art</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about" class="section fade" style="animation-delay:.15s">
+    <div class="card about">
+      <img src="your-photo.jpg" alt="Portrait of Malin">
+      <div>
+        <div class="pill">based in Sweden · phonetics · creativity</div>
+        <h2>About Me</h2>
+        <p class="lead">
+          I work at the intersection of speech science, data, and art. I like clear thinking and gentle aesthetics —
+          research that touches life, and visuals that carry meaning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="academia" class="section fade" style="animation-delay:.25s">
+    <div class="card">
+      <h2>Academia & Research</h2>
+      <p>
+        Focus: articulatory phonetics (jaw–lip–tongue coordination), dyslexia-oriented applications,
+        and bridges to AI‑supported analysis pipelines. I care about precision, open methods, and impact.
+      </p>
+      <a class="btn" href="references.html">Full publications →</a>
+    </div>
+  </section>
+
+  <section id="consulting" class="section fade" style="animation-delay:.32s">
+    <div class="card">
+      <h2>Consulting</h2>
+      <p class="lead">Services</p>
+      <ul class="list">
+        <li>Data analysis & visualization (R, speech/signal, reproducible notebooks)</li>
+        <li>Phonetics expertise (assessment, speech production, articulatory data)</li>
+        <li>Talks & workshops (language, AI literacy, creative analytics)</li>
+      </ul>
+      <p>
+        I work with universities, teams, and individuals who want rigorous thinking with a warm, human tone.
+      </p>
+    </div>
+  </section>
+
+  <section id="art" class="section fade" style="animation-delay:.4s">
+    <div class="card">
+      <h2>Art</h2>
+      <p>
+        Mixed media — pattern, color, and quiet motion. A space for calm intensity and playful detail.
+      </p>
+      <div class="gallery">
+        <img src="art1.jpg" alt="Artwork 1">
+        <img src="art2.jpg" alt="Artwork 2">
+        <img src="art3.jpg" alt="Artwork 3">
+        <img src="art4.jpg" alt="Artwork 4">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fade" style="animation-delay:.48s">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>  ·  🔗 <a href="https://linkedin.com/in/yourname">LinkedIn</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>© 2025 Malin Svensson</footer>
+</body>
+</html>
