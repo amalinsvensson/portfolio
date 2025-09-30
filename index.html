@@ -53,25 +53,47 @@
   /*  .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}*/
     .about {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* default = mobil: staplat */
   align-items: center;
-  text-align: center; /* centrerar texten */
+  text-align: center;
   gap: 24px;
 }
 
 .about img {
   width: 80%;
-  max-width: 400px;
+  max-width: 400px; /* stor bild även på dator */
   height: auto;
   border-radius: 16px;
   object-fit: cover;
   filter: saturate(.85) contrast(.95);
   box-shadow: var(--shadow);
+  margin-bottom: 16px;
 }
 
 .about .intro {
   max-width: 700px;
 }
+
+/* På dator: bild + text bredvid varandra */
+@media (min-width: 880px) {
+  .about {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about img {
+    width: 300px;   /* större än din tidigare 180px */
+    max-width: none;
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+
+  .about .intro {
+    max-width: none;
+  }
+}
+
 
 
 
