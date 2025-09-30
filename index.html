@@ -49,8 +49,40 @@
     .card h2{margin:0 0 12px;font-size:28px}
     .card p.lead{color:var(--muted);margin-top:0}
 
-    .about{display:grid;gap:28px;grid-template-columns:280px 1fr;align-items:center}
-    .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}
+  /*.about{display:grid;gap:28px;grid-template-columns:280px 1fr;align-items:center}*/
+  /*  .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}*/
+    .about {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr; /* default: stacked (mobil) */
+  align-items: center;
+  text-align: center; /* centrerar texten under bilden */
+}
+
+.about img {
+  width: 70%;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto; /* centrerar bilden */
+  border-radius: 16px;
+  object-fit: cover;
+  filter: saturate(.85) contrast(.95);
+  box-shadow: var(--shadow);
+}
+
+/* På större skärmar lägger vi dem bredvid varandra */
+@media (min-width: 880px) {
+  .about {
+    grid-template-columns: 200px 1fr; /* bild + text sida vid sida */
+    text-align: left;
+  }
+  .about img {
+    width: 180px;
+    height: 200px;
+    margin: 0;
+  }
+}
+
 
     .list{margin:0;padding-left:18px}
     .list li{margin:.35rem 0}
@@ -108,9 +140,13 @@
 <p>
   My background is in phonetics and speech production, with a focus on articulatory data and the neurocognitive and physiological foundations of language. 
   Method development and data processing are central to my work. 
-  I am interested in how speaker identity (dialect, second language, emotions) and speech-related pathologies such as motor diseases and dyslexia shape communication. 
+ 
+</p> 
+      <p> 
+         This research helps us understand how speaker identity (dialect, second language, emotions) and speech-related pathologies 
+        such as motor diseases and dyslexia shape communication. 
   I am particularly interested in applying this knowledge to ASR and TTS.
-</p>
+      </p>
 
      
       <p><a href="references.html" style="color:var(--accent);font-weight:600">See full list of publications →</a></p>
