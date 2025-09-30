@@ -3,95 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malin Svensson – Portfolio</title>
+  <title>Malin Svensson — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;line-height:1.6;background:#fafafa;color:#222}
-    header{background:#333;color:#fff;padding:2rem;text-align:center}
-    nav{display:flex;gap:1rem;justify-content:center;background:#222;flex-wrap:wrap}
-    nav a{color:#fff;text-decoration:none;padding:0.8rem 1rem}
-    nav a:hover{background:#444}
-    section{max-width:900px;margin:auto;background:#fff;padding:2rem;margin-top:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-    img{max-width:200px;border-radius:8px}
-    footer{background:#222;color:#fff;text-align:center;padding:1rem;margin-top:2rem}
+    :root{
+      --bg:#0b0b0c;
+      --text:#e7e7ea;
+      --muted:#a9a9b3;
+      --card:#141418;
+      --accent:#7c9cff;
+      --accent-2:#ff8ab5;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+    .hero{
+      text-align:center;padding:96px 20px 72px;
+      background: radial-gradient(1200px 600px at 50% -20%, rgba(124,156,255,.25), transparent 60%),
+                  radial-gradient(900px 600px at 100% 0%, rgba(255,138,181,.18), transparent 55%),
+                  linear-gradient(180deg, #101015 0%, #0b0b0c 100%);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .hero h1{font-family:"Playfair Display", serif; font-weight:700; font-size: clamp(32px, 5vw, 56px); margin:0 0 12px;}
+    .hero p{max-width:900px;margin:0 auto;color:var(--muted);font-size:clamp(16px, 2vw, 18px)}
+
+    .nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(160%) blur(10px);background:rgba(11,11,12,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px}
+    .spacer{flex:1}
+    .nav a{color:var(--text);text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:600}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .section{max-width:1100px;margin:40px auto;padding:0 20px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
+    .card h2{margin:0 0 12px;font-size:28px}
+    .card p.lead{color:var(--muted);margin-top:0}
+
+    .about{display:grid;gap:28px;grid-template-columns:200px 1fr;align-items:center}
+    .about img{width:180px;height:180px;border-radius:22px;object-fit:cover;box-shadow:var(--shadow)}
+
+    .list{margin:0;padding-left:18px}
+    .list li{margin:.35rem 0}
+
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (min-width:700px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .gallery img{width:100%;height:190px;object-fit:cover;border-radius:12px}
   </style>
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>Malin Svensson</h1>
     <p>Researcher • Consultant • Artist</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#academia">Academia</a>
-    <a href="#consulting">Consulting</a>
-    <a href="#art">Art</a>
-    <a href="#contact">Contact</a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="spacer"></div>
+      <a href="#about">About</a>
+      <a href="#academia">Academia</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#art">Art</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="Malin.jpg" alt="Portrait">
-    <p>
-      I am a curious and versatile professional who combines academic research, artistic creation, 
-      and consulting work. My background in phonetics and speech technology meets my passion for creative 
-      expression and practical solutions.
-    </p>
+  <section id="about" class="section">
+    <div class="card about">
+      <img src="your-photo.jpg" alt="Portrait">
+      <div class="intro">
+        <h2>About Me</h2>
+        <p>
+          I am a curious and versatile professional who combines academic research, artistic creation, 
+          and consulting work. My background in phonetics and speech technology meets my passion for creative 
+          expression and practical solutions.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section id="academia">
-    <h2>Academia & Research</h2>
-    <p>
-      My academic background is in phonetics and speech production, with a focus on articulatory data, 
-      neurocognitive aspects of language, and applications in AI and dyslexia.
-    </p>
-    <h3>Selected Publications</h3>
-    <ul>
-      <li>Publication 1 – <a href="#">Link</a></li>
-      <li>Publication 2 – <a href="#">Link</a></li>
-      <li>Publication 3 – <a href="#">Link</a></li>
-    </ul>
+  <section id="academia" class="section">
+    <div class="card">
+      <h2>Academia & Research</h2>
+      <p>
+        My academic background is in phonetics and speech production, with a focus on articulatory data, 
+        neurocognitive aspects of language, and applications in AI and dyslexia.
+      </p>
+      <p><a href="references.html" style="color:var(--accent);font-weight:600">See full list of publications →</a></p>
+    </div>
   </section>
 
-  <section id="consulting">
-    <h2>Consulting</h2>
-    <p>I offer services such as:</p>
-    <ul>
-      <li>Data analysis and visualization (R, speech technology, phonetics)</li>
-      <li>Linguistic assessments and speech-related support</li>
-      <li>Workshops and lectures on language, AI, and creativity</li>
-    </ul>
-    <p>
-      I help companies, research projects, and creative initiatives find new solutions by combining 
-      analytical skills with creative thinking.
-    </p>
+  <section id="consulting" class="section">
+    <div class="card">
+      <h2>Consulting</h2>
+      <p>I offer services such as:</p>
+      <ul class="list">
+        <li>Data analysis and visualization (R, speech technology, phonetics)</li>
+        <li>Linguistic assessments and speech-related support</li>
+        <li>Workshops and lectures on language, AI, and creativity</li>
+      </ul>
+      <p>I help companies, research projects, and creative initiatives find new solutions by combining analytical skills with creative thinking.</p>
+    </div>
   </section>
 
-  <section id="art">
-    <h2>Art</h2>
-    <p>
-      My artistic work explores color, form, and patterns through drawings, paintings, and mixed media. 
-      Art is both a personal expression and a way to connect with others.
-    </p>
-    <h3>Examples</h3>
-    <ul>
-      <li><a href="#">Gallery 1</a></li>
-      <li><a href="#">Gallery 2</a></li>
-      <li><a href="#">Commissions & Projects</a></li>
-    </ul>
+  <section id="art" class="section">
+    <div class="card">
+      <h2>Art</h2>
+      <p>
+        My artistic work explores color, form, and patterns through drawings, paintings, and mixed media. 
+        Art is both a personal expression and a way to connect with others.
+      </p>
+      <div class="gallery">
+        <img src="art1.jpg" alt="Artwork 1">
+        <img src="art2.jpg" alt="Artwork 2">
+        <img src="art3.jpg" alt="Artwork 3">
+        <img src="art4.jpg" alt="Artwork 4">
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Interested in collaborating, commissioning art, or learning more?</p>
-    <p>
-      📧 <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a><br>
-      🔗 <a href="https://linkedin.com/in/yourname">LinkedIn</a>
-    </p>
+  <section id="contact" class="section">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Interested in collaborating, commissioning art, or learning more?</p>
+      <p>
+        📧 <a href="mailto:yourmail@gmail.com" style="color:var(--accent)">yourmail@gmail.com</a><br>
+        🔗 <a href="https://linkedin.com/in/yourname" style="color:var(--accent)">LinkedIn</a>
+      </p>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Malin Svensson</p>
+  <footer style="text-align:center;padding:1rem;margin-top:2rem;color:var(--muted)">
+    © 2025 Malin Svensson
   </footer>
 </body>
 </html>
+
