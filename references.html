@@ -6,7 +6,7 @@
   <title>Publications — Malin Svensson</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0b0b0c; --text:#e7e7ea; --muted:#a9a9b3; --card:#141418; --accent:#7c9cff; --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
@@ -35,40 +35,43 @@ h2 {
   color: #ffffff;              /* övriga rubriker förblir vita */
 }
 
-    .references {
+  .references {
   display: flex;
-  flex-direction: column; /* mobil: bild ovanför text */
+  flex-direction: column; /* mobil: bild överst, text under */
   align-items: center;
   gap: 24px;
 }
-    .references img.portrait {
+
+.references img.portrait {
   width: 70%;
   max-width: 320px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: var(--shadow);
-  margin-top: 24px;   /* <-- flyttar ner bilden */
+  margin-top: 24px; /* flytta ner bilden lite från headern */
 }
 
+.ref-text {
+  width: 100%;
+}
 
+/* Desktop: bild vänster, text höger */
 @media (min-width: 880px) {
+  .references {
+    flex-direction: row;       /* <-- nyckeln: sida vid sida */
+    align-items: flex-start;
+    text-align: left;
+  }
+
   .references img.portrait {
-    width: 300px;
+    width: 300px;              /* större porträtt på desktop */
     max-width: none;
-    margin-right: 40px;
-    margin-top: 40px;  /* större nedflyttning */
-  }
-}
-
-
-
-  .references img.portrait {
-    width: 280px;
-    margin-right: 40px;
+    margin-right: 40px;        /* luft mellan bild och text */
+    margin-top: 40px;          /* flytta ner lite extra på desktop */
   }
 
-  .references .ref-text {
+  .ref-text {
     flex: 1;
   }
 }
