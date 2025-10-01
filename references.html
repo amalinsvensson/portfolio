@@ -41,23 +41,27 @@ h2 {
   align-items: center;
   gap: 24px;
 }
-
-.references img.portrait {
+    .references img.portrait {
   width: 70%;
-  max-width: 280px;  /* större bild */
+  max-width: 320px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: var(--shadow);
+  margin-top: 24px;   /* <-- flyttar ner bilden */
 }
 
-/* Desktop: bild vänster, all text till höger */
+
 @media (min-width: 880px) {
-  .references {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
+  .references img.portrait {
+    width: 300px;
+    max-width: none;
+    margin-right: 40px;
+    margin-top: 40px;  /* större nedflyttning */
   }
+}
+
+
 
   .references img.portrait {
     width: 280px;
