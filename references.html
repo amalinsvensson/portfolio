@@ -34,6 +34,39 @@
 h2 {
   color: #ffffff;              /* övriga rubriker förblir vita */
 }
+.references {
+  display: flex;
+  flex-direction: column; /* mobil = staplat */
+  align-items: center;
+  gap: 24px;
+}
+
+.references img.portrait {
+  width: 60%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+/* Datorläge: bild + text sida vid sida */
+@media (min-width: 880px) {
+  .references {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .references img.portrait {
+    width: 200px;
+    margin-right: 32px;
+  }
+
+  .references .ref-text {
+    flex: 1;
+  }
+}
 
 
   </style>
@@ -45,14 +78,18 @@ h2 {
   </header>
 
   <main class="container">
-    <div class="card">
-      <h2>Selected Publications</h2>
+<div class="card references">
+  <img src="IMG_9952.jpg" alt="Portrait of Malin" class="portrait">
+  <div class="ref-text">
+    <h2>Selected Publications</h2>
       <ul class="list">
         <li>Svensson Lundmark, M. (2023). <em>Rapid movements at segment boundaries</em>. Journal of the Acoustical Society of America. <a href="https://doi.org/10.1121/10.0017362">DOI link</a></li> 
         <li>Svensson Lundmark, M., Ambrazaitis, G., Frid, J., & Schötz, S. (2021). <em>Word-initial consonant–vowel coordination in a lexical pitch-accent language</em>. Speech Communication. <a href="https://doi.org/10.1515/phon-2021-2014">DOI link</a></li>
         <li>Svensson Lundmark, M., & Erickson, D. (2024). <em>Segmental and Syllabic Articulations: A Descriptive Approach</em>. Journal of Speech, Language, and Hearing Research. <a href="https://doi.org/10.1044/2024_JSLHR-23-00092 ">DOI link</a></li>
       </ul>
     </div>
+</div>
+
 
     <div class="card">
       <h2>Full Profiles</h2>
