@@ -35,7 +35,45 @@ h2 {
   color: #ffffff;              /* övriga rubriker förblir vita */
 }
 
+.references {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 
+.references img.portrait {
+  width: 70%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+
+.ref-text {
+  width: 100%;
+}
+
+@media (min-width: 880px) {
+  .references {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .references img.portrait {
+    width: 330px;
+    max-width: none;
+    margin-right: 40px;
+    margin-top: 44px;
+  }
+
+  .ref-text {
+    flex: 1;
+  }
+}
 
 
 
@@ -51,8 +89,10 @@ Selected publications illustrating research on speech articulation, prosody, and
   
 
 
-<main class="container"> 
+<main class="container references">
+  <img src="IMG_9952 (kopia 3).jpg" alt="Portrait of Malin" class="portrait">
 
+  <div class="ref-text">
 
     <div class="card">
   <h2>Selected Publications</h2>
@@ -87,13 +127,16 @@ This chapter investigates how jaw-opening movements relate to patterns of syllab
 </div>
 
     <div class="card">
-      <h2>Full Profiles</h2>
+      <h2>Further Publications and Research Profiles</h2>
       <p>
         🔗 <a href="https://orcid.org/0000-0001-6305-5891" target="_blank">ORCID</a><br>
         🔗 <a href="https://scholar.google.com/citations?user=KaA1R5oAAAAJ&hl=sv" target="_blank">Google Scholar</a><br>
         🔗 <a href="https://portal.research.lu.se/en/persons/malin-svensson-lundmark" target="_blank">Lund University Profile</a>
+                🔗 <a href="www.linkedin.com/in/malin-svensson-lundmark-584282323" target="_blank">LinkedIn</a>
+
       </p>
     </div>
+</div>
 </main>
 
  
