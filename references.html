@@ -35,46 +35,7 @@ h2 {
   color: #ffffff;              /* övriga rubriker förblir vita */
 }
 
-  .references {
-  display: flex;
-  flex-direction: column; /* mobil: bild överst, text under */
-  align-items: center;
-  gap: 24px;
-}
 
-.references img.portrait {
-  width: 70%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: var(--shadow);
-  margin-top: 24px; /* flytta ner bilden lite från headern */
-}
-
-.ref-text {
-  width: 100%;
-}
-
-/* Desktop: bild vänster, text höger */
-@media (min-width: 880px) {
-  .references {
-    flex-direction: row;       /* <-- nyckeln: sida vid sida */
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .references img.portrait {
-    width: 330px;              /* större porträtt på desktop */
-    max-width: none;
-    margin-right: 40px;        /* luft mellan bild och text */
-    margin-top: 44px;          /* flytta ner lite extra på desktop */
-  }
-
-  .ref-text {
-    flex: 1;
-  }
-}
 
 
 
@@ -83,24 +44,47 @@ h2 {
 <body>
  <header>
   <h1>Publications</h1>
-  <p class="lead">Selected examples and links to full profiles.</p>
-</header>
+<p class="lead">
+Selected publications illustrating research on speech articulation, prosody, and the relationship between movement and acoustic structure.
+</p>
+ </header>
+  
 
 
-  <main class="container references">
-  <img src="IMG_9952 (kopia 3).jpg" alt="Portrait of Malin" class="portrait">
-  <div class="ref-text">
+<main class="container"> 
+
+
     <div class="card">
-      <h2>Selected Publications</h2>
-      <ul class="list">
-        <li><span style="font-weight:600;">Svensson Lundmark, M.</span> (2023). Rapid movements at segment boundaries. <em>The Journal of the Acoustical Society of America</em>. <a href="https://doi.org/10.1121/10.0017362" target="_blank" rel="noopener noreferrer"
->DOI link</a></li> 
-        <li><span style="font-weight:600;">Svensson Lundmark, M.</span>, Ambrazaitis, G., Frid, J., & Schötz, S. (2021). Word-initial consonant–vowel coordination in a lexical pitch-accent language. <em>Phonetica</em>. <a href="https://doi.org/10.1515/phon-2021-2014" target="_blank" rel="noopener noreferrer"
->DOI link</a></li>
-        <li><span style="font-weight:600;">Svensson Lundmark, M.</span>, & Erickson, D. (2024). Segmental and Syllabic Articulations: A Descriptive Approach. <em>Journal of Speech, Language, and Hearing Research</em>. <a href="https://doi.org/10.1044/2024_JSLHR-23-00092 "target="_blank" rel="noopener noreferrer"
->DOI link</a></li>
-      </ul>
-    </div>
+  <h2>Selected Publications</h2>
+
+  <p>
+    <strong>Rapid movements at segment boundaries</strong><br>
+    Svensson Lundmark, M. (2023). <em>The Journal of the Acoustical Society of America</em>.<br>
+    This study investigates how articulatory acceleration peaks relate to acoustic segment boundaries, linking speech dynamics to the timing of consonants and vowels.
+    <br>
+    <a href="https://doi.org/10.1121/10.0017362" target="_blank" rel="noopener noreferrer">DOI link</a>
+  </p>
+
+  <hr>
+
+  <p>
+    <strong>Segmental and Syllabic Articulations: A Descriptive Approach</strong><br>
+    Svensson Lundmark, M. & Erickson, D. (2024). <em>Journal of Speech, Language, and Hearing Research</em>.<br>
+    This article explores how jaw, tongue, and lip movements contribute differently to syllable structure and segmental contrasts, providing a descriptive framework for articulatory organization in speech.
+    <br>
+    <a href="https://doi.org/10.1044/2024_JSLHR-23-00092" target="_blank" rel="noopener noreferrer">DOI link</a>
+  </p>
+
+  <hr>
+
+  <p>
+    <strong>Jaw-opening patterns and their correspondence with syllable stress patterns</strong><br>
+    Svensson Lundmark, M. (2025). In <em>Rhythms of Speech and Language: Physiology, Cognition, Culture</em>, Cambridge University Press.<br>
+This chapter investigates how jaw-opening movements relate to patterns of syllable stress and rhythmic organization in speech.    <br>
+    <a href="https://www.cambridge.org/core/books/rhythms-of-speech-and-language/jawopening-patterns-and-their-correspondence-with-syllable-stress-patterns/D513611A3F6BB5EF2B9035920FD36A60" target="_blank" rel="noopener noreferrer">Chapter link</a>
+  </p>
+
+</div>
 
     <div class="card">
       <h2>Full Profiles</h2>
@@ -110,7 +94,6 @@ h2 {
         🔗 <a href="https://portal.research.lu.se/en/persons/malin-svensson-lundmark" target="_blank">Lund University Profile</a>
       </p>
     </div>
-  </div>
 </main>
 
  
