@@ -85,7 +85,7 @@ color:#111;line-height:1.6}
   img.hero-image {
     width: 50%;
     border-radius: 16px;
-    margin: 30px 0;
+    margin: 30px auto;
   }
 
   .tabs {
@@ -100,6 +100,27 @@ color:#111;line-height:1.6}
   font-size: 1.1rem;
   font-weight: 700;
   margin-right: 24px;
+}
+    .project-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 18px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #111;
+}
+
+.project-nav a:hover {
+  opacity: 0.6;
 }
 
 .wp1 { color: #2563eb; }   /* blå */
@@ -153,16 +174,25 @@ color:#111;line-height:1.6}
   <p>
     Temporal Precision in Speech – Unveiling the Physiology of Prosodic Structure.
   <p>
-      <p>
-    A Marie Skłodowska-Curie Postdoctoral Fellowship (MSCA PF)
-  hosted by Humboldt-Universität zu Berlin.
+    <p class="subtitle">
+  A Marie Skłodowska-Curie Postdoctoral Fellowship (MSCA PF)
+</p>
 
-
-
-  </p>
+<p class="hosts">
+  Principal investigator: Malin Svensson Lundmark<br>
+  Hosts: Christine Mooshammer (Humboldt-Universität zu Berlin)<br>
+  Secondment: Takayuki Ito (Université Grenoble Alpes)
+</p>
+    
 
 </header>
-
+<nav class="project-nav">
+  <a href="#overview">Overview</a>
+  <a href="#wp1" class="wp1">WP1</a>
+  <a href="#wp2" class="wp2">WP2</a>
+  <a href="#wp3" class="wp3">WP3</a>
+  <a href="#news">News</a>
+</nav>
  
 
 <div class="container">
@@ -179,6 +209,8 @@ color:#111;line-height:1.6}
   Hosts and collaborators:
   Humboldt-Universität zu Berlin, 
   Université Grenoble Alpes
+
+      
   
 </p>
   </p>
