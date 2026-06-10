@@ -2,7 +2,7 @@
 
 Short introduction text here.
 
-![TEMPOS image](image.jpg)
+![TEMPOS image](rip_signal.jpg)
 
 ---
 
