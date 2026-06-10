@@ -202,17 +202,36 @@ color:#111;line-height:1.6}
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:48px;
+  gap:32px;
   margin:50px 0 30px;
   flex-wrap:wrap;
 }
 
 .logos img{
-  height:60px;
+  max-height:70px;
+  max-width:220px;
   width:auto;
-  opacity:.9;
+  height:auto;
+  object-fit:contain;
+}
+    .eu-funding{
+  text-align:center;
+  margin:40px 0;
 }
 
+.eu-funding img{
+  height:70px;
+  width:auto;
+  margin-bottom:14px;
+}
+
+.eu-funding p{
+  color:#666;
+  font-size:.95rem;
+  max-width:700px;
+  margin:auto;
+  line-height:1.6;
+}
    
   </style>
 </head>
@@ -282,7 +301,7 @@ color:#111;line-height:1.6}
   <p>
     Funded by the European Union under the
     Marie Skłodowska-Curie Actions (MSCA PF)
-    within Horizon Europe.
+    within Horizon Europe.<br>
      <a href="https://cordis.europa.eu/project/id/101284448" target="_blank">
     Project details on Horizon Europe
   </a>
