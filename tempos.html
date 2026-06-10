@@ -41,127 +41,139 @@
 
     .hero p{max-width:900px;margin:0 auto;color:var(--muted);font-size:clamp(16px, 2vw, 18px)}
 
-    .nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(160%) blur(10px);background:rgba(11,11,12,.6);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px}
-    .spacer{flex:1}
-    .nav a{color:var(--text);text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:600}
-    .nav a:hover{background:rgba(255,255,255,.06)}
-
-    .section{max-width:1100px;margin:40px auto;padding:0 20px}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
-    .card h2{margin:0 0 12px;font-size:28px}
-    .card p.lead{color:var(--muted);margin-top:0}
-
-  /*.about{display:grid;gap:28px;grid-template-columns:280px 1fr;align-items:center}*/
-  /*  .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}*/
- .about {
-  display: flex;
-  flex-direction: column; /* mobil: staplat */
-  align-items: center;
-  text-align: center;
-  gap: 24px;
-}
-
-.about img {
-  width: 90%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-  filter: saturate(.85) contrast(.95);
-  box-shadow: var(--shadow);
-  margin-bottom: 16px;
-}
-
-.about .intro {
-  max-width: 700px;
-}
-
-/* På dator: bild + text bredvid varandra */
-@media (min-width: 880px) {
-  .about {
-    flex-direction: row;       /* nu garanterat sida vid sida */
-    justify-content: center;   /* centrerar helheten */
-    align-items: flex-start;
-    text-align: left;
+  <style>
+  body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background: white;
+    color: #111;
+    line-height: 1.7;
   }
 
-  .about img {
-    flex: 0 0 35%;   /* 35% av bredden, inte mer */
-    max-width: 320px;
-    margin-bottom: 0;
-    margin-right: 32px;
+  .hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: #f5f7fb;
   }
 
-  .about .intro {
-    flex: 1;          /* resten av utrymmet */
-    max-width: 600px;
+  .hero h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 56px;
+    margin-bottom: 10px;
   }
-}
 
+  .hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+  }
 
+  .container {
+    max-width: 950px;
+    margin: auto;
+    padding: 40px 20px;
+  }
 
+  img.hero-image {
+    width: 100%;
+    border-radius: 16px;
+    margin: 30px 0;
+  }
 
-    .list{margin:0;padding-left:18px}
-    .list li{margin:.35rem 0}
-    
+  .tabs {
+    display: flex;
+    gap: 12px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
 
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    @media (min-width:500px){.gallery{grid-template-columns:repeat(4,1fr)}}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
-    /* Dusty pastel colors per section */
-#about h2 { color: #d8a3a3; }      /* dusty rose */
-#academia h2 { color: #6f9bbd; }   /* dusty blue */
-#consulting h2 { color: #d8a47f; } /* muted peach */
-#art h2 { color: #a890c4; }        /* dusty lavender */
-#contact h2 { color: #7fbf9b; }    /* soft sage green */
+  .tab {
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: white;
+  }
 
-    section {
-  scroll-margin-top: 80px; /* justera beroende på nav-höjd */
-}
+  .wp1 { background: #d98989; }
+  .wp2 { background: #7ca6c2; }
+  .wp3 { background: #8f86c9; }
 
+  .card {
+    background: #f7f7f7;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-top: 50px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+</style>
    
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Malin Svensson Lundmark, PhD</h1>
- 
-   <p>Speech Scientist • Researcher • Artist </p>
-     <p style="color:var(--muted); font-size:clamp(15px,1.8vw,17px); margin-top:10px;">
+
+<header class="hero">
+  <h1>TEMPOS</h1>
+
+  <p>
+    Temporal Precision in Speech – Unveiling the Physiology of Prosodic Structure.
   </p>
-  </header>
+</header>
 
-  <nav class="nav">
-    
- <section class="section">
-  <div class="card">
+<div class="container">
 
-    <h2>TEMPOS</h2>
+  <img src="rip_signal.jpg" alt="TEMPOS signal" class="hero-image">
 
-    <p>
-      Short introduction text here.
-    </p>
+  <h2>About the project</h2>
 
-    <img src="rip_signal.jpg" alt="TEMPOS image" style="width:100%; border-radius:12px; margin:20px 0;">
+  <p>
+    TEMPOS explores how speech rhythm emerges through interactions between breathing,
+    posture, articulation and acoustics.
+  </p>
 
-    <h2>Work Packages</h2>
-
-    <h3>WP1-breath-timing</h3>
-    <p>Co-dependency of breathing cycle and syllable strength.</p>
-
-    <h3>WP2-posture-rhythm</h3>
-    <p>Posture stability during strong/weak syllables.</p>
-
-    <h3>WP3-body-sound</h3>
-    <p>Articulatory-acoustic mapping for explainable speech technology.</p>
-
-    <h2>News</h2>
-
-    <ul>
-      <li>July 2026: Project started</li>
-      <li>22–23 July 2026: EMA workshop in Bielefeld</li>
-    </ul>
-
+  <div class="tabs">
+    <div class="tab wp1">WP1 – Breath & Timing</div>
+    <div class="tab wp2">WP2 – Posture & Rhythm</div>
+    <div class="tab wp3">WP3 – Body & Sound</div>
   </div>
+
+  <div class="card">
+    <h3>WP1 – Breath & Timing</h3>
+    <p>
+      Co-dependency of breathing cycle and syllable strength.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>WP2 – Posture & Rhythm</h3>
+    <p>
+      Posture stability during strong/weak syllables.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>WP3 – Body & Sound</h3>
+    <p>
+      Articulatory-acoustic mapping for explainable speech technology.
+    </p>
+  </div>
+
+  <h2>News</h2>
+
+  <ul>
+    <li>July 2026 – Project started</li>
+    <li>22–23 July 2026 – EMA workshop in Bielefeld</li>
+  </ul>
+
+</div>
+
+
+   
 </section>
