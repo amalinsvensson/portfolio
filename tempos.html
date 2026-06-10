@@ -1,28 +1,167 @@
-# TEMPOS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malin Svensson – Portfolio</title>
+ <meta name="description" content="Speech scientist exploring articulation, prosody, and AI – turning phonetic insight into human-centered technology.">
+ <meta name="description" lang="sv" content="Forskare i fonetik och talteknologi – utforskar artikulation, prosodi och AI för att skapa mer mänsklig talteknologi.">
+<meta name="keywords" content="phonetics, speech science, ASR, TTS, prosody, articulation, speech technology, AI, Sweden, Malin Svensson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --text:#e7e7ea;
+      --muted:#a9a9b3;
+      --card:#141418;
+      --accent:#7c9cff;
+      --accent-2:#ff8ab5;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 
-Short introduction text here.
+    .hero{
+      text-align:center;padding:96px 20px 72px;
+      background: radial-gradient(1200px 600px at 50% -20%, rgba(124,156,255,.25), transparent 60%),
+                  radial-gradient(900px 600px at 100% 0%, rgba(255,138,181,.18), transparent 55%),
+                  linear-gradient(180deg, #101015 0%, #0b0b0c 100%);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    /*.hero h1{font-family:"Playfair Display"; font-weight:700; font-size: clamp(32px, 5vw, 56px); margin:0 0 12px;}*/
+   /*.hero h1 {font-family: 'Raleway', sans-serif; font-weight: 800; letter-spacing: 1px; font-size: clamp(34px, 5vw, 60px); margin: 0 0 8px; color: #d2b48c; text-transform: uppercase;}*/
+    .hero h1 {font-family: 'Raleway', sans-serif;font-weight: 900; etter-spacing: 1px; font-size: clamp(34px, 5vw, 60px); margin: 0 0 8px; color: #e0c097;}
 
-![TEMPOS image](rip_signal.jpg)
 
----
 
-## Work Packages
+    .hero p{max-width:900px;margin:0 auto;color:var(--muted);font-size:clamp(16px, 2vw, 18px)}
 
-### W1-breath-timing: Co-dependency of breathing cycle and syllable strength
+    .nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(160%) blur(10px);background:rgba(11,11,12,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px}
+    .spacer{flex:1}
+    .nav a{color:var(--text);text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:600}
+    .nav a:hover{background:rgba(255,255,255,.06)}
 
-Short description.
+    .section{max-width:1100px;margin:40px auto;padding:0 20px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
+    .card h2{margin:0 0 12px;font-size:28px}
+    .card p.lead{color:var(--muted);margin-top:0}
 
-### W2-posture-rhythm: Posture stability during strong/weak syllables
+  /*.about{display:grid;gap:28px;grid-template-columns:280px 1fr;align-items:center}*/
+  /*  .about img{width:270px;height:310px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow)}*/
+ .about {
+  display: flex;
+  flex-direction: column; /* mobil: staplat */
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
 
-Short description.
+.about img {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  filter: saturate(.85) contrast(.95);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
 
-### W3-body-sound: Articulatory-acoustic mapping for explainable speech technology
+.about .intro {
+  max-width: 700px;
+}
 
-Short description.
+/* På dator: bild + text bredvid varandra */
+@media (min-width: 880px) {
+  .about {
+    flex-direction: row;       /* nu garanterat sida vid sida */
+    justify-content: center;   /* centrerar helheten */
+    align-items: flex-start;
+    text-align: left;
+  }
 
----
+  .about img {
+    flex: 0 0 35%;   /* 35% av bredden, inte mer */
+    max-width: 320px;
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
 
-## News
+  .about .intro {
+    flex: 1;          /* resten av utrymmet */
+    max-width: 600px;
+  }
+}
 
-- July 2026: Project started
-- 22-23 July 2026: EMA workshop in Bielefeld
+
+
+
+    .list{margin:0;padding-left:18px}
+    .list li{margin:.35rem 0}
+    
+
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (min-width:500px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    /* Dusty pastel colors per section */
+#about h2 { color: #d8a3a3; }      /* dusty rose */
+#academia h2 { color: #6f9bbd; }   /* dusty blue */
+#consulting h2 { color: #d8a47f; } /* muted peach */
+#art h2 { color: #a890c4; }        /* dusty lavender */
+#contact h2 { color: #7fbf9b; }    /* soft sage green */
+
+    section {
+  scroll-margin-top: 80px; /* justera beroende på nav-höjd */
+}
+
+   
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Malin Svensson Lundmark, PhD</h1>
+ 
+   <p>Speech Scientist • Researcher • Artist </p>
+     <p style="color:var(--muted); font-size:clamp(15px,1.8vw,17px); margin-top:10px;">
+  </p>
+  </header>
+
+  <nav class="nav">
+    
+ <section class="section">
+  <div class="card">
+
+    <h2>TEMPOS</h2>
+
+    <p>
+      Short introduction text here.
+    </p>
+
+    <img src="rip_signal.png" alt="TEMPOS image" style="width:100%; border-radius:12px; margin:20px 0;">
+
+    <h2>Work Packages</h2>
+
+    <h3>WP1-breath-timing</h3>
+    <p>Co-dependency of breathing cycle and syllable strength.</p>
+
+    <h3>WP2-posture-rhythm</h3>
+    <p>Posture stability during strong/weak syllables.</p>
+
+    <h3>WP3-body-sound</h3>
+    <p>Articulatory-acoustic mapping for explainable speech technology.</p>
+
+    <h2>News</h2>
+
+    <ul>
+      <li>July 2026: Project started</li>
+      <li>22–23 July 2026: EMA workshop in Bielefeld</li>
+    </ul>
+
+  </div>
+</section>
