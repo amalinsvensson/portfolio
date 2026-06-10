@@ -24,7 +24,8 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:white;
+color:#111;line-height:1.6}
 
     .hero{
       text-align:center;padding:96px 20px 72px;
@@ -40,7 +41,13 @@
 
 
     .hero p{max-width:900px;margin:0 auto;color:var(--muted);font-size:clamp(16px, 2vw, 18px)}
-
+<nav class="project-nav">
+  <a href="#overview">Overview</a>
+  <a href="#wp1">WP1</a>
+  <a href="#wp2">WP2</a>
+  <a href="#wp3">WP3</a>
+  <a href="#news">News</a>
+</nav>
   <style>
   body {
     margin: 0;
@@ -48,6 +55,7 @@
     background: white;
     color: #111;
     line-height: 1.7;
+    
   }
 
   .hero {
@@ -112,6 +120,27 @@
   ul {
     padding-left: 20px;
   }
+
+    .project-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
+
+.project-nav a:hover {
+  opacity: 0.6;
+}
 </style>
    
   </style>
@@ -124,17 +153,32 @@
   <p>
     Temporal Precision in Speech – Unveiling the Physiology of Prosodic Structure.
   </p>
+
 </header>
+
+  <p>
+  A Marie Skłodowska-Curie Postdoctoral Fellowship (MSCA PF)
+  hosted by Humboldt-Universität zu Berlin.
+</p>
 
 <div class="container">
 
   <img src="rip_signal.jpg" alt="TEMPOS signal" class="hero-image">
 
   <h2>About the project</h2>
+  <h2 id="overview">About the project</h2>
+  <h2 id="wp1" class="wp1">WP1 – Breath & Timing</h2>
 
   <p>
     TEMPOS explores how speech rhythm emerges through interactions between breathing,
     posture, articulation and acoustics.
+
+    <p>
+  Hosts and collaborators:
+  Humboldt-Universität zu Berlin
+  Université Grenoble Alpes
+  
+</p>
   </p>
 
   <div class="tabs">
